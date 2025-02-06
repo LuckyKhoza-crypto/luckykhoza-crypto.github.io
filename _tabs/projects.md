@@ -8,13 +8,13 @@ order: 1
 
 ## Below are the projects I've worked on before.
 
-<div class="container mt-5">
+<div class="container mt-3">
   <div class="row">
     {% for project in site.projects %}
       <div class="col-md-4 mb-4">
         <div class="custom-card">
           <div class="custom-card-body">
-            <h2 class="card-title">{{ project.title }}</h2>
+            <h3 class="card-title">{{ project.title }}</h3>
             <p class="card-text">Published on: {{ project.date | date: "%B %d, %Y" }}</p>
             
             {% if project.tags %}
