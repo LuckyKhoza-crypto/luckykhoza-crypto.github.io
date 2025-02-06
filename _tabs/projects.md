@@ -34,35 +34,19 @@ order: 1
   </div>
 </div>
 
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const modeToggle = document.querySelector(".sidebar-bottom #mode-toggle");
-
-    function applyTheme() {
-      if (document.body.getAttribute("theme_mode") === "dark") {
-        document.body.setAttribute("theme_mode", "light");
-      } else {
-        document.body.setAttribute("theme_mode", "dark");
-      }
-    }
-
-    // Set default theme to dark if not already set
-    if (!document.body.getAttribute("theme_mode")) {
-      document.body.setAttribute("theme_mode", "dark");
-    }
-
-    modeToggle.addEventListener("click", applyTheme);
-  });
-</script>
-
 <style>
+  body {
+    background-color: #121212;
+    color: #ddd;
+  }
+
   .custom-card {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
     padding: 15px;
-    background-color: var(--bs-card-bg, #fff);
-    color: #000;
+    background-color: #333;
+    color: #ddd;
   }
 
   .custom-card:hover {
@@ -74,55 +58,24 @@ order: 1
     padding: 20px;
   }
 
-  /* Dark Mode Styles (default theme) */
-  [theme_mode="dark"] .custom-card {
-    background-color: #333 !important;
-    color: #ddd !important;
+  .custom-card .card-title,
+  .custom-card .card-text,
+  .custom-card a {
+    color: #fff;
   }
 
-  [theme_mode="dark"] .custom-card .card-title,
-  [theme_mode="dark"] .custom-card .card-text,
-  [theme_mode="dark"] .custom-card a {
-    color: #fff !important;
+  .custom-card .badge {
+    background-color: #555;
+    color: #fff;
   }
 
-  [theme_mode="dark"] .custom-card .badge {
-    background-color: #555 !important;
-    color: #fff !important;
+  .btn-secondary {
+    background-color: #666;
+    border-color: #888;
+    color: #fff;
   }
 
-  [theme_mode="dark"] .btn-secondary {
-    background-color: #666 !important;
-    border-color: #888 !important;
-  }
-
-  [theme_mode="dark"] .btn-secondary:hover {
-    background-color: #777 !important;
-  }
-
-  /* Light Mode Styles */
-  [theme_mode="light"] .custom-card {
-    background-color: #fff !important;
-    color: #000 !important;
-  }
-
-  [theme_mode="light"] .custom-card .card-title,
-  [theme_mode="light"] .custom-card .card-text,
-  [theme_mode="light"] .custom-card a {
-    color: #000 !important;
-  }
-
-  [theme_mode="light"] .custom-card .badge {
-    background-color: #ddd !important;
-    color: #000 !important;
-  }
-
-  [theme_mode="light"] .btn-secondary {
-    background-color: #007bff !important;
-    border-color: #0056b3 !important;
-  }
-
-  [theme_mode="light"] .btn-secondary:hover {
-    background-color: #0056b3 !important;
+  .btn-secondary:hover {
+    background-color: #777;
   }
 </style>
