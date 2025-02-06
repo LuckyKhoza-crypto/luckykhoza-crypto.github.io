@@ -5,6 +5,7 @@ permalink: /projects/
 icon: fa-solid fa-diagram-project
 order: 1
 ---
+
 ## Below are the projects I've worked on before.
 
 <div class="container mt-5">
@@ -34,15 +35,23 @@ order: 1
 </div>
 
 <script>
-  document.addEventListener("DOMContentLoaded", () => {
+  document.addEventListener("DOMContentLoaded", function () {
     const modeToggle = document.querySelector(".sidebar-bottom #mode-toggle");
 
-    function toggleTheme() {
-      const currentTheme = document.body.getAttribute("data-bs-theme");
-      document.body.setAttribute("data-bs-theme", currentTheme === "dark" ? "light" : "dark");
+    function applyTheme() {
+      if (document.body.getAttribute("theme_mode") === "dark") {
+        document.body.setAttribute("theme_mode", "light");
+      } else {
+        document.body.setAttribute("theme_mode", "dark");
+      }
     }
 
-    modeToggle.addEventListener("click", toggleTheme);
+    // Set default theme to dark if not already set
+    if (!document.body.getAttribute("theme_mode")) {
+      document.body.setAttribute("theme_mode", "dark");
+    }
+
+    modeToggle.addEventListener("click", applyTheme);
   });
 </script>
 
@@ -65,29 +74,55 @@ order: 1
     padding: 20px;
   }
 
-  /* Dark Mode Styles */
-  [data-bs-theme="dark"] .custom-card {
+  /* Dark Mode Styles (default theme) */
+  [theme_mode="dark"] .custom-card {
     background-color: #333 !important;
     color: #ddd !important;
   }
 
-  [data-bs-theme="dark"] .custom-card .card-title,
-  [data-bs-theme="dark"] .custom-card .card-text,
-  [data-bs-theme="dark"] .custom-card a {
+  [theme_mode="dark"] .custom-card .card-title,
+  [theme_mode="dark"] .custom-card .card-text,
+  [theme_mode="dark"] .custom-card a {
     color: #fff !important;
   }
 
-  [data-bs-theme="dark"] .custom-card .badge {
+  [theme_mode="dark"] .custom-card .badge {
     background-color: #555 !important;
     color: #fff !important;
   }
 
-  [data-bs-theme="dark"] .btn-secondary {
+  [theme_mode="dark"] .btn-secondary {
     background-color: #666 !important;
     border-color: #888 !important;
   }
 
-  [data-bs-theme="dark"] .btn-secondary:hover {
+  [theme_mode="dark"] .btn-secondary:hover {
     background-color: #777 !important;
+  }
+
+  /* Light Mode Styles */
+  [theme_mode="light"] .custom-card {
+    background-color: #fff !important;
+    color: #000 !important;
+  }
+
+  [theme_mode="light"] .custom-card .card-title,
+  [theme_mode="light"] .custom-card .card-text,
+  [theme_mode="light"] .custom-card a {
+    color: #000 !important;
+  }
+
+  [theme_mode="light"] .custom-card .badge {
+    background-color: #ddd !important;
+    color: #000 !important;
+  }
+
+  [theme_mode="light"] .btn-secondary {
+    background-color: #007bff !important;
+    border-color: #0056b3 !important;
+  }
+
+  [theme_mode="light"] .btn-secondary:hover {
+    background-color: #0056b3 !important;
   }
 </style>
