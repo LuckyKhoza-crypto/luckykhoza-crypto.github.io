@@ -9,7 +9,7 @@ permalink: /projects/:path
 
 ### The second one!!
 
-**Chirpy** is a **Jekyll** template that allows you to build iteractive sites quickly, just like this one. 
+**Chirpy** is a **Jekyll** template that allows you to build iteractive sites quickly, just like this one here.
 
 * If you have hosted a site on **Github pages**, you were actually using Jekyll.
 
