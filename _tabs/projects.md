@@ -19,7 +19,7 @@ order: 1
             
             {% if project.tags %}
               <p><strong>Tags:</strong></p>
-              <ul class="list-unstyled categories">
+              <ul class="list-unstyled">
                 {% for tag in project.tags %}
                   <li class="badge bg-secondary me-1">{{ tag }}</li>
                 {% endfor %}
