@@ -19,11 +19,12 @@ order: 1
             
             {% if project.tags %}
               <p><strong>Tags:</strong></p>
-              <ul class="list-unstyled d-flex flex-wrap">
+              <ul class="custom-tags">
                 {% for tag in project.tags %}
-                  <li class="badge bg-secondary rounded-pill mt-1 me-1">{{ tag }}</li>
+                  <li class="mt-2">{{ tag }}</li>
                 {% endfor %}
               </ul>
+
 
             {% endif %}
             
@@ -79,4 +80,21 @@ order: 1
   .btn-secondary:hover {
     background-color: #777;
   }
+
+  .custom-tags {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+}
+
+.custom-tags li {
+  background-color: #444;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 15px;
+  margin-right: 8px;
+  font-size: 14px;
+}
+
 </style>
