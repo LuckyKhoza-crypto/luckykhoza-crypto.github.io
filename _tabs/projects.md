@@ -19,11 +19,12 @@ order: 1
             
             {% if project.tags %}
               <p><strong>Tags:</strong></p>
-              <ul class="list-unstyled">
+              <ul class="list-unstyled d-flex flex-wrap">
                 {% for tag in project.tags %}
-                  <li class="badge badge-pill badge-secondary me-1">{{ tag }}</li>
+                  <li class="badge bg-secondary rounded-pill mt-1 me-1">{{ tag }}</li>
                 {% endfor %}
               </ul>
+
             {% endif %}
             
             <a href="{{ project.url }}" class="btn btn-secondary mt-2">View Project</a>
