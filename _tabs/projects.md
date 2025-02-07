@@ -15,7 +15,7 @@ order: 1
         <div class="custom-card">
           <div class="custom-card-body">
             <h3 class="card-title">{{ project.title }}</h3>
-            <p class="card-text">Published on: {{ project.date | date: "%B %d, %Y" }}</p>
+            <p class="card-text">Published: {{ project.date | date: "%B %d, %Y" }}</p>
             
             {% if project.tags %}
               <p><strong>Tags:</strong></p>
