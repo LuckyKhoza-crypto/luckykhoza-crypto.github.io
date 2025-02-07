@@ -21,7 +21,7 @@ order: 1
               <p><strong>Tags:</strong></p>
               <ul class="list-unstyled">
                 {% for tag in project.tags %}
-                  <li class="badge bg-secondary me-1">{{ tag }}</li>
+                  <li class="badge badge-pill badge-secondary me-1">{{ tag }}</li>
                 {% endfor %}
               </ul>
             {% endif %}
