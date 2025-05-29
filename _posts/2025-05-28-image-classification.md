@@ -85,7 +85,7 @@ from stanford_car_labels import car_labels
 ```
 
 **important** the `stanford_car_labels` is an array list with all the cars our model is trained on. You can download the list from the link below. After the download, save it to your project folder and import it as we did above.
-[standford_car_labels.py](https://github.com/LuckyKhoza-crypto/luckykhoza-crypto.github.io/blob/56043151cc66ca11fe6dadf912c9f1714b0810b1/stanford_car_labels.py)
+[stanford_car_labels.py](https://github.com/LuckyKhoza-crypto/luckykhoza-crypto.github.io/blob/56043151cc66ca11fe6dadf912c9f1714b0810b1/stanford_car_labels.py)
 
 ### sense check: the hardest part of this project is done.
 
