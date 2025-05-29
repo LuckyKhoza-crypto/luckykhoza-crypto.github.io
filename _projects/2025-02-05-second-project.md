@@ -3,7 +3,7 @@ title: The Power Of Order
 categories: [code, framework]
 tags: [github, chirpy, templates]     # TAG names should always be lowercase
 layout: page
-permalink: /projects/:path
+permalink: /posts/:path
 ---
 # My Portfolio Changed
 
