@@ -1,5 +1,5 @@
 ---
-title: | vs || Operator in Java
+title: "| vs || Operator in Java"
 categories: [java, operators ]
 tags: [java, operators]    # TAG names should always be lowercase
 layout: page
@@ -33,4 +33,5 @@ boolean isError = fn1(v1) || fn2(v1);
 `||` short-circuts the computation we are doing, thus, stopping early if `true` is returned.
 
 # conclusion
+
 each of these operators can be used for different situations. Understanding the intention behind your logic will help you choose the right operator for your scenario.
